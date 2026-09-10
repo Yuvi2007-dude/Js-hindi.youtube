@@ -40,3 +40,32 @@ const heros = ["shaktiman", "naagraj", "doga"]
 //  https://262.ecma-international.org/5.1/#sec-11.4.3
 
 
+
+// --------------------------------------------------------------------------
+
+// Stack & Heap Memory
+
+// Stack memory is used to store primitive datatypes and reference to the object in heap memory
+// Heap memory is used to store reference(non-primitive) datatypes
+
+let myYoutubename = "Codevolution" // stored in stack memory
+
+let anotherName = "myYoutubename" // stored in stack memory
+console.log(anotherName); // myYoutubename
+console.log(myYoutubename); // Codevolution
+
+let userOne = {
+      email: "user@google.com",
+      upi: "user@upi"
+
+}
+
+
+let usertwo = userOne // reference of userOne is stored in usertwo
+
+usertwo.email = "hitesh@google.com  " // changing the email property of usertwo will also change the email property of userOne because both are pointing to the same object in heap memory
+
+console.log(userOne.email); 
+
+console.log(usertwo.email); 
+
